@@ -1,0 +1,14 @@
+---
+import PublicLayout from '../layouts/PublicLayout.astro'
+import Header from '../components/Header.astro'
+import LoginForm from '../components/LoginForm.astro'
+---
+<PublicLayout title="Iniciar sesión | Electro."><Header /><main class="admin-login flex min-h-[calc(100vh-90px)] items-center justify-center px-6 py-12"><div class="w-full max-w-md"><div class="admin-login-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="20" r="11"/><path d="M13 52c1.7-11 9-18 19-18s17.3 7 19 18" stroke-width="6" stroke-linecap="round"/></svg></div><p class="admin-login-kicker">Área administrativa</p><h1 class="admin-login-title">Inicio de sesión</h1><LoginForm /></div></main></PublicLayout>
+
+<style>
+  .admin-login { background: #6491ed; }
+  .admin-login-mark { display: flex; justify-content: center; color: #ffffff; }
+  .admin-login-mark svg { width: 112px; height: 112px; }
+  .admin-login-kicker { margin: 1rem 0 .25rem; text-align: center; color: #ffffff; font-size: 1.05rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+  .admin-login-title { margin: 0 0 2rem; text-align: center; color: #ffffff; font-size: 2rem; font-weight: 400; text-transform: uppercase; }
+</style>

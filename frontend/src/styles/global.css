@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Times New Roman", Times, serif;
+  color: #263238;
+  background: #6491ed;
+}
+
+body { margin: 0; background: #6491ed; }
+
+/* Contraste de la interfaz sin alterar su estructura ni distribución. */
+.hero-neon { background: #6491ed; }
+.hero-neon .text-white { color: #ffffff; }
+.hero-neon .text-\[\#6ad7e5\] { color: #f4c6d2; }
+.hero-neon .text-\[\#fff1f2\] { color: #e8f4f7; }
+.bg-white { color: #123b52; }
+.bg-white .text-slate-400 { color: #64748b; }
+.bg-white .text-slate-500 { color: #52606d; }
+.bg-white .text-slate-600 { color: #405563; }
+.bg-white { background-color: #ffffff; }
+header.bg-white, header.bg-white > div { background-color: #6491ed !important; border-color: #6491ed !important; }
+header .text-\[\#123b52\] { color: #ffffff !important; }
+header .text-slate-600 { color: #f4f8ff !important; }
+.input-field { color: #123b52; background-color: #ffffff; }
+.input-field::placeholder { color: #64748b; opacity: 1; }
+.input-field:focus { border-color: #123b52; box-shadow: 0 0 0 2px rgba(18, 59, 82, .16); }
+
+/* Paleta celeste claro */
+.bg-\[\#f7f7f7\] { background-color: #6491ed !important; }
+.bg-\[\#f4d000\] { background-color: #c46b84 !important; }
+.text-yellow-600, .text-\[\#e4bf00\] { color: #8f3556 !important; }
+.text-yellow-300 { color: #e2a6b7 !important; }
+.button-primary { background-color: #c46b84 !important; color: #4a172b !important; }
+.button-primary:hover { background-color: #8f3556 !important; color: #ffffff !important; }
+.button-secondary { border-color: #e3b5c3 !important; color: #4a172b !important; }
+.button-secondary:hover { border-color: #8f3556 !important; }
+.input-field { border-color: #e3b5c3; }
+.input-field:focus { border-color: #8f3556; box-shadow: 0 0 0 2px rgba(143, 53, 86, .16); }
+.product-card { border-color: #c98298 !important; box-shadow: 0 10px 24px rgba(107, 31, 58, .16), 0 2px 6px rgba(107, 31, 58, .08); }
+.product-card > div:first-child { border: 1px solid #e3b5c3; background: #fff8fa; }
+.product-card:hover { box-shadow: 0 14px 28px rgba(107, 31, 58, .22), 0 3px 8px rgba(107, 31, 58, .1); }
+
+@layer components {
+  .button-primary { @apply rounded-full bg-[#f4d000] px-5 py-3 font-semibold text-[#123b52] transition hover:bg-[#e4bf00]; }
+  .button-secondary { @apply rounded-full border border-[#dce2e5] px-5 py-3 font-semibold text-[#123b52] transition hover:border-[#f4d000]; }
+  .input-field { @apply w-full rounded-lg border border-slate-200 bg-white px-4 py-3 outline-none transition focus:border-[#f4d000] focus:ring-2 focus:ring-yellow-100; }
+}

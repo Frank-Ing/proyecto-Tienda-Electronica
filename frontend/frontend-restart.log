@@ -1,0 +1,16 @@
+
+> tienda-electronica-frontend@1.0.0 dev
+> astro dev --host 0.0.0.0
+
+[2m13:52:14[22m [34m[types][39m Generated [2m1ms[22m
+[2m13:52:14[22m [34m[content][39m Syncing content
+[2m13:52:14[22m [34m[content][39m Synced content
+[2m13:52:14[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+
+[42m[1m astro [22m[49m [32mv5.18.2[39m [2mready in[22m 496 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://localhost:4321/[39m
+[2m┃[22m Network  [36mhttp://192.168.1.13:4321/[39m
+
+[2m13:52:14[22m [32mwatching for file changes...[39m
+^C^C

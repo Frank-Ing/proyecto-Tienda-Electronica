@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Laptops gaming con iluminación neón</title>
+  <desc id="desc">Composición abstracta de laptops sobre un fondo azul, morado y magenta</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#05071b"/><stop offset=".5" stop-color="#10194f"/><stop offset="1" stop-color="#32105c"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#155cff"/><stop offset=".5" stop-color="#00aeef"/><stop offset="1" stop-color="#d414a5"/></linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00aeef"/><stop offset=".55" stop-color="#155cff"/><stop offset="1" stop-color="#f000a8"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <path d="M0 430 310 250 650 440 1200 230V620H0Z" fill="#090d34" opacity=".9"/>
+  <path d="M0 470 360 300M80 620 470 350M570 620 930 360M820 620 1200 390" stroke="#243fa2" stroke-width="3" opacity=".55"/>
+  <g filter="url(#glow)" opacity=".9"><path d="M0 390 690 505 1200 375" stroke="url(#edge)" stroke-width="7" fill="none"/><path d="M60 120 420 35 630 100 270 190Z" fill="url(#screen)" opacity=".35"/></g>
+  <g transform="translate(270 75) rotate(-10)"><path d="M0 0h410l-25 245H28Z" fill="#101226" stroke="#263b88" stroke-width="8"/><path d="M22 22h366l-22 195H42Z" fill="url(#screen)" opacity=".8"/><path d="M28 252h425l80 55H-38Z" fill="#080a19" stroke="url(#edge)" stroke-width="7"/><path d="M72 266h315" stroke="#155cff" stroke-width="3"/></g>
+  <g transform="translate(720 210) rotate(12)"><path d="M0 0h355l-18 205H24Z" fill="#0b0d20" stroke="#263b88" stroke-width="8"/><path d="M20 20h315l-17 162H35Z" fill="#10194f"/><path d="M24 215h370l68 47H-28Z" fill="#070915" stroke="#f000a8" stroke-width="7"/><path d="M78 231h250" stroke="#00aeef" stroke-width="3"/></g>
+  <circle cx="100" cy="120" r="80" fill="#d414a5" opacity=".16"/><circle cx="1080" cy="120" r="120" fill="#155cff" opacity=".2"/>
+</svg>

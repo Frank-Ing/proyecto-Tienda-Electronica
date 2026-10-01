@@ -1,0 +1,18 @@
+---
+const { product } = Astro.props
+const editing = Boolean(product)
+---
+<form id="product-form" data-id={product?.identificador_producto ?? ''} class="space-y-5 rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+  <div><label for="modelo_producto" class="mb-2 block text-sm font-semibold text-[#123b52]">Modelo</label><input id="modelo_producto" name="modelo_producto" value={product?.modelo_producto ?? ''} class="input-field" /></div>
+  <div class="grid gap-5 md:grid-cols-2"><div><label for="precio" class="mb-2 block text-sm font-semibold text-[#123b52]">Precio</label><input id="precio" name="precio" type="number" min="0.01" step="0.01" value={product?.precio ?? ''} class="input-field" /></div><div><label for="stock" class="mb-2 block text-sm font-semibold text-[#123b52]">Stock</label><input id="stock" name="stock" type="number" min="0" step="1" value={product?.stock ?? ''} class="input-field" /></div></div>
+  <div><label for="categoria" class="mb-2 block text-sm font-semibold text-[#123b52]">Categoría</label><select id="categoria" name="categoria" class="input-field"><option value="">Selecciona una categoría</option>{['celular','laptop','monitor','teclado','mouse','audifonos'].map((category) => <option value={category} selected={product?.categoria === category}>{category}</option>)}</select></div>
+  <div><label for="imagen_url" class="mb-2 block text-sm font-semibold text-[#123b52]">URL de imagen <span class="font-normal text-slate-400">(opcional)</span></label><input id="imagen_url" name="imagen_url" type="url" value={product?.imagen_url ?? ''} placeholder="https://ejemplo.com/imagen.jpg" class="input-field" /><p class="mt-1 text-xs text-slate-500">Debe ser una URL pública HTTP o HTTPS.</p></div>
+  <p id="product-error" class="hidden text-sm text-red-600"></p><button class="button-primary w-full" type="submit">{editing ? 'Guardar cambios' : 'Registrar producto'}</button>
+</form>
+<script>
+  import { createProduct, updateProduct } from '../features/products/products.api'
+  import { productSchema } from '../features/products/products.schemas'
+  const form = document.querySelector<HTMLFormElement>('#product-form')!
+  const error = document.querySelector<HTMLParagraphElement>('#product-error')!
+  form.addEventListener('submit', async (event) => { event.preventDefault(); const values = Object.fromEntries(new FormData(form)); const parsed = productSchema.safeParse(values); if (!parsed.success) { error.textContent = parsed.error.issues[0].message; error.classList.remove('hidden'); return } try { const id = form.dataset.id; if (id) await updateProduct(Number(id), parsed.data); else await createProduct(parsed.data); window.location.href = '/admin/products' } catch (reason) { error.textContent = reason instanceof Error ? reason.message : 'No fue posible guardar el producto'; error.classList.remove('hidden') } })
+</script>

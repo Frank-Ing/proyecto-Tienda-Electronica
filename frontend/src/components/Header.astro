@@ -1,0 +1,15 @@
+---
+const { admin = false } = Astro.props
+---
+<header class="border-b border-slate-100 bg-white">
+  <div class="flex items-center justify-between bg-[#f5f5f5] px-6 py-2 text-xs text-slate-600"><span>Bienvenido a Tienda Loren</span><a href="https://wa.me/59176035687" target="_blank" rel="noopener noreferrer" class="font-semibold text-[#123b52]">WhatsApp: 76035687</a></div>
+  <div class="mx-auto flex max-w-7xl items-center gap-6 px-6 py-5">
+    <a href="/" class="flex items-center gap-3"><img src="/images/WhatsApp%20Image%202026-10-01%20at%2012.19.35.jpeg" alt="Tienda Loren tecnología" class="h-16 w-16 object-contain" /><span class="hidden text-2xl font-semibold text-[#123b52] sm:inline">Tienda Loren</span></a>
+    <nav class="hidden items-center gap-6 text-sm font-semibold text-[#123b52] md:flex">
+      <a href="/" class="hover:text-yellow-600">Inicio</a><a href="/shop" class="hover:text-yellow-600">Productos</a><a href="https://wa.me/59176035687" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-600">Contactos</a>
+    </nav>
+    <div class="ml-auto flex items-center gap-4 text-sm">
+      {admin ? <a href="/admin/products" class="font-semibold text-[#123b52]">Panel administrador</a> : <a href="/login" class="font-semibold text-[#123b52]">Mi cuenta</a>}
+    </div>
+  </div>
+</header>

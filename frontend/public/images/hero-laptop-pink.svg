@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Laptop sobre un escritorio con pantalla colorida</title>
+  <desc id="desc">Imagen decorativa de una laptop con iluminación coral, rosa y cyan</desc>
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2b1c2f"/><stop offset=".52" stop-color="#70435e"/><stop offset="1" stop-color="#d47b88"/></linearGradient>
+    <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e99aaa"/><stop offset="1" stop-color="#743f61"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6ad7e5"/><stop offset=".38" stop-color="#f6a4c1"/><stop offset=".7" stop-color="#e85292"/><stop offset="1" stop-color="#ffbd91"/></linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="1200" height="620" fill="url(#room)"/>
+  <rect y="390" width="1200" height="230" fill="url(#desk)"/>
+  <rect x="80" y="35" width="260" height="220" rx="8" fill="#1d1828" opacity=".7"/>
+  <rect x="105" y="60" width="210" height="165" fill="#d99aa4" opacity=".38"/>
+  <circle cx="915" cy="120" r="130" fill="#ffc8a6" opacity=".35" filter="url(#blur)"/>
+  <ellipse cx="590" cy="505" rx="390" ry="46" fill="#1d1527" opacity=".6" filter="url(#shadow)"/>
+  <g transform="translate(280 78) rotate(-3)">
+    <path d="M80 0h500l-20 325H52Z" fill="#171323" stroke="#241a2d" stroke-width="12"/>
+    <path d="M103 25h450l-17 275H78Z" fill="url(#screen)"/>
+    <g opacity=".6" fill="#fff1dc"><circle cx="165" cy="95" r="20"/><circle cx="235" cy="170" r="34"/><circle cx="335" cy="110" r="18"/><circle cx="440" cy="210" r="42"/><circle cx="500" cy="70" r="24"/></g>
+    <path d="M50 340h545l135 125H-72Z" fill="#24172b" stroke="#e85292" stroke-width="9"/>
+    <path d="M150 372h350l55 45H100Z" fill="#8e4b70" opacity=".8"/>
+    <path d="M-72 465h802l-32 22H-35Z" fill="#171323" stroke="#6ad7e5" stroke-width="6"/>
+  </g>
+  <path d="M0 540c250-80 410-18 620 18s370 8 580-40v102H0Z" fill="#332039" opacity=".5"/>
+</svg>
